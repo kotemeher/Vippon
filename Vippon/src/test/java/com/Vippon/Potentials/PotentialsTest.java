@@ -37,7 +37,7 @@ public  void main() throws Throwable {
 		sp.selectCaseOwnerOption("Qualification");
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "PotentialDetails"), "potential Details");
 		
-		driver.close();
+	
 		
 }
 
