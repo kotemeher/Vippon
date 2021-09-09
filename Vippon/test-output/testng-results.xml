@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-07T09:27:05 IST" name="Default suite" finished-at="2021-09-07T09:28:37 IST" duration-ms="91788">
+  <suite started-at="2021-09-09T20:07:12 IST" name="Default suite" finished-at="2021-09-09T20:07:40 IST" duration-ms="28368">
     <groups>
     </groups>
-    <test started-at="2021-09-07T09:27:05 IST" name="Default test" finished-at="2021-09-07T09:28:37 IST" duration-ms="91788">
-      <class name="com.Vippon.Lead.CreateLeadTest">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.Vippon.Lead.CreateLeadTest@1e0b4072]" started-at="2021-09-07T09:27:05 IST" name="openBrowser" finished-at="2021-09-07T09:27:24 IST" duration-ms="19114" status="PASS">
+    <test started-at="2021-09-09T20:07:12 IST" name="Default test" finished-at="2021-09-09T20:07:40 IST" duration-ms="28368">
+      <class name="com.Vippon.Potentials.PotentialsTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.Vippon.Potentials.PotentialsTest@1e0b4072]" started-at="2021-09-09T20:07:12 IST" name="openBrowser" finished-at="2021-09-09T20:07:18 IST" duration-ms="6035" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="main()[pri:0, instance:com.Vippon.Lead.CreateLeadTest@1e0b4072]" started-at="2021-09-07T09:27:24 IST" name="main" finished-at="2021-09-07T09:28:37 IST" duration-ms="72515" status="PASS">
+        <test-method signature="main()[pri:0, instance:com.Vippon.Potentials.PotentialsTest@1e0b4072]" started-at="2021-09-09T20:07:18 IST" name="main" finished-at="2021-09-09T20:07:39 IST" duration-ms="21372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="closedBrowser()[pri:0, instance:com.Vippon.Lead.CreateLeadTest@1e0b4072]" started-at="2021-09-07T09:28:37 IST" name="closedBrowser" finished-at="2021-09-07T09:28:37 IST" duration-ms="100" status="PASS">
+        <test-method is-config="true" signature="closedBrowser()[pri:0, instance:com.Vippon.Potentials.PotentialsTest@1e0b4072]" started-at="2021-09-09T20:07:39 IST" name="closedBrowser" finished-at="2021-09-09T20:07:40 IST" duration-ms="891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closedBrowser -->
-      </class> <!-- com.Vippon.Lead.CreateLeadTest -->
+      </class> <!-- com.Vippon.Potentials.PotentialsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

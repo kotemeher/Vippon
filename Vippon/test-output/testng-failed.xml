@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Vippon.Invoice.InvoiceTest">
+      <class name="com.Vippon.Potentials.PotentialsTest">
         <methods>
+          <include name="openBrowser"/>
+          <include name="closedBrowser"/>
           <include name="main"/>
         </methods>
-      </class> <!-- com.Vippon.Invoice.InvoiceTest -->
+      </class> <!-- com.Vippon.Potentials.PotentialsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
