@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.Vippon.Invoice.InvoiceTest"/>
+      <class name="com.Vippon.Reports.ReportsTest"/>
+      <class name="com.Vippon.Potentials.PotentialsTest"/>
+      <class name="com.Vippon.PriceBooks.PriceBooksTest"/>
+      <class name="com.Vippon.Lead.CreateLeadTest"/>
+      <class name="com.Vippon.solutions.CreateSolutionsTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
