@@ -23,11 +23,11 @@ public  void main() throws Throwable {
 
 		WebdriverCommonLib wlib = new WebdriverCommonLib();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "homeTitle"), "Home Page");
-		PotentialsHome hp = new PotentialsHome();
+		 PotentialsHome hp = new PotentialsHome();
 		hp.clickPotentialsTab();
 		
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "customViewTitle"), "Custom View Page");
-		CustomPotentialPage  cvs = new CustomPotentialPage();
+		CustomPotentialPage cvs = new CustomPotentialPage();
 		cvs.clickNewPotentialBtn();
 		Thread.sleep(2000);
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "customPotentialTitle"), "Create Potential Page");

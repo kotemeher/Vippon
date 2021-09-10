@@ -15,7 +15,7 @@ public class CreatePotentialPage {
 	@FindBy(xpath="//a[text()='QSpiders Bull Temple']") private WebElement accountNameTb1;
 	
 	@FindBy(xpath="//img[@src='/crm/images/cal.gif']") private WebElement closingDtImg;
-	@FindBy(xpath="//a[@class='calCurrDay'and text()='9']") private WebElement calDay;
+	@FindBy(xpath="//a[@class='calDay'and text()='9']") private WebElement calDay;
 	
 	@FindBy(xpath="//select[@name='property(Stage)']") private WebElement stageBtn;
 	
