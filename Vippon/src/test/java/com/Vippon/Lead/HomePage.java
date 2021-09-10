@@ -17,7 +17,7 @@ public class HomePage {
 	}
 	
 	public void clickLeadsTab() {
-		// TODO Auto-generated method stub
+		
 		leadsTab.click();
 	}
 	

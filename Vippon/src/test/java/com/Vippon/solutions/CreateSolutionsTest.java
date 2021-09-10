@@ -21,7 +21,7 @@ public class CreateSolutionsTest  extends BaseTest {
 		
 		WebdriverCommonLib wlib = new WebdriverCommonLib();
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "homeTitle"), "Home Page");
-		HomePage1 hp=new HomePage1();
+		HomePage1 hp = new HomePage1();
 		hp.clickSolutionsTab();
 		
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "customViewTitle"), "Custom View Page");
