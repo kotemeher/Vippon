@@ -26,7 +26,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>crmtest.xml</suiteXmlFile>
+						<suiteXmlFile>invoice.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
