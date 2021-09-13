@@ -31,7 +31,7 @@ public class InvoiceTest extends BaseTest {
 		InvoiceCustomViewPage cv= new InvoiceCustomViewPage();
 		cv.selectCaseOption("My Invoices");
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "createInvoiceTitle"), "Create Lead Page");
-	    driver.close();
+	    bt.closedBrowser();
 	   }	
 
 }

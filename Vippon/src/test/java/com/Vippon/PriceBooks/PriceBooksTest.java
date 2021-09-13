@@ -35,6 +35,6 @@ public void main() throws Throwable {
 		sp.createLeadWithMandatoryDetails2(flib.readExcelData(EXCEL_PATH,"Leads",11, 1), flib.readExcelData(EXCEL_PATH,"Leads",12, 1));
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "PriceBookDetails"), "price book Details");
 		
-        driver.close();
+        bt.closedBrowser();
 }
 }

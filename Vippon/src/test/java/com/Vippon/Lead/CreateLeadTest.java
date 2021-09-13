@@ -35,7 +35,7 @@ public class CreateLeadTest extends BaseTest{
 		cl.createLeadWithMandatoryDetails(flib.readExcelData(EXCEL_PATH,"Leads",1, 1),flib.readExcelData(EXCEL_PATH, "Leads", 2, 1));
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "leadDetailsTitle"), "Lead Details Page");
 		
-		driver.close();
+		bt.closedBrowser();
 			
 	}
 	

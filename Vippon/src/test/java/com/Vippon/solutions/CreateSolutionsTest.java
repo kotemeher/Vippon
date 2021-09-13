@@ -34,7 +34,7 @@ public class CreateSolutionsTest  extends BaseTest {
 		sp.createLeadWithMandatoryDetails1(flib.readExcelData(EXCEL_PATH,"Leads",4, 1), flib.readExcelData(EXCEL_PATH,"Leads",6, 1),flib.readExcelData(EXCEL_PATH,"Leads", 7, 1));
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "SolutionsDetails"), "Solutions Details");
 		
-		driver.close();
+		bt.closedBrowser();
 	}
 	
 

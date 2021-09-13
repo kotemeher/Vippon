@@ -39,7 +39,7 @@ public class ReportsTest extends BaseTest {
 		r1.SelectCaseOwnerOption("Contacts");
 		r1.Continue();
 		
-		driver.close();
+		bt.closedBrowser();
 		
 	}
 
