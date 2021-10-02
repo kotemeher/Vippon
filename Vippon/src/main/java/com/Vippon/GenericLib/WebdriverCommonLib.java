@@ -13,7 +13,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.google.common.io.Files;
 
 public class WebdriverCommonLib extends BaseTest{
@@ -28,14 +31,27 @@ public class WebdriverCommonLib extends BaseTest{
 	
 	public void verify(String actual,String expected,String page)
 	  {
-	  if(actual.equals(expected))
-	    {
-		System.out.println(page+" is displayed, PASS");
-	    }
-	else
-	    {
-		System.out.println(page+" is not displayed, FAIL");
-	    }
+//	  if(actual.equals(expected))
+//	    {
+//		System.out.println(page+" is displayed, PASS");
+//	    }
+//	else
+//	    {
+//		System.out.println(page+" is not displayed, FAIL");
+//	    }
+//	  }
+		if(actual.equals(expected))
+		{
+			Assert.assertTrue(true);
+			ReportListeners.test=ReportListeners.extent.createTest("verify");
+			ReportListeners.test.pass(MarkupHelper.createLabel("is displayed pass", ExtentColor.BLUE));
+		}
+		else
+		{
+			Assert.assertTrue(false);
+			ReportListeners.test=ReportListeners.extent.createTest("verify");
+			ReportListeners.test.pass(MarkupHelper.createLabel("is not displayed pass", ExtentColor.RED));
+		}
 	  }
 	
 	public void selectOption(WebElement element, int index)
@@ -87,20 +103,22 @@ public class WebdriverCommonLib extends BaseTest{
 		
 		BaseTest.driver.switchTo().frame(element);	
 	}
-	public void getElementPageScreenshot(String screenshotPath)
+	public String getFullPageScreenshot(String screenshotName)
 	{
 	    TakesScreenshot ts = (TakesScreenshot)BaseTest.driver;
 	    File src = ts.getScreenshotAs(OutputType.FILE);
-	    File dest = new File(screenshotPath);
+	    String dest="C:\\Users\\Meher Chakradhar\\git\\repository\\Vippon\\screenshots"+screenshotName+"png";
+	    File destination = new File(dest);
 	    try {
-	    	Files.copy(src, dest);
+	    	Files.copy(src, destination);
 	    } catch (IOException e) {
-	    		// TODO Auto-generated catch block
+	    		
 	    		e.printStackTrace();
 	    }
+	    return dest;
 	 
 	}
-	public void getFullPageScreenshot(WebElement element,String screenshotPath)
+	public void getElementPageScreenshot(WebElement element,String screenshotPath)
 	{
 	    
 	    File src = element.getScreenshotAs(OutputType.FILE);
@@ -108,7 +126,7 @@ public class WebdriverCommonLib extends BaseTest{
 	    try {
 	    	Files.copy(src, dest);
 	    } catch (IOException e) {
-	    		// TODO Auto-generated catch block
+	    		
 	    		e.printStackTrace();
 	    }
 	}
@@ -145,7 +163,45 @@ public class WebdriverCommonLib extends BaseTest{
 			}
 			
 		}
+		
 		BaseTest.driver.switchTo().window(mainwindow);
 	}
+	
+	
+	public void elementStatus(WebElement element, int checkType, String elementName)
+	{
+		switch(checkType)
+		{
+		case 1:
+			try {
+				element.isDisplayed();
+				ReportListeners.test.info(MarkupHelper.createLabel(elementName+" is Displayed", ExtentColor.PURPLE));
+			}
+			catch (Exception e) {
+				ReportListeners.test.info(MarkupHelper.createLabel(elementName+" is not Displayed", ExtentColor.ORANGE));
+			}
+			
+			break;
+		case 2:
+			try {
+				element.isEnabled();
+				ReportListeners.test.info(MarkupHelper.createLabel(elementName+" is Enabled", ExtentColor.PURPLE));
+			}
+			catch (Exception e) {
+				ReportListeners.test.info(MarkupHelper.createLabel(elementName+" is not Enabled", ExtentColor.ORANGE));
+			}
+			break;
+		case 3: 
+			try {
+				element.isSelected();
+				ReportListeners.test.info(MarkupHelper.createLabel(elementName+" is Selected", ExtentColor.PURPLE));
+			}
+			catch (Exception e) {
+				ReportListeners.test.info(MarkupHelper.createLabel(elementName+" is not Selected", ExtentColor.ORANGE));
+			}
+			break;
+		}
+	}
+
 }
 

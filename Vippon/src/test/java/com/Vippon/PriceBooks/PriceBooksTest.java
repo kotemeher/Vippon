@@ -1,19 +1,19 @@
 package com.Vippon.PriceBooks;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Vippon.GenericLib.BaseTest;
 import com.Vippon.GenericLib.FileLib;
 import com.Vippon.GenericLib.WebdriverCommonLib;
 import com.Vippon.Pages.LoginPage;
-
+@Listeners(com.Vippon.GenericLib.ReportListeners.class)
 
 public class PriceBooksTest extends BaseTest{
 	@Test
 public void main() throws Throwable {
 		
-		BaseTest bt = new BaseTest();
-		bt.openBrowser();
+		
 		
 		LoginPage lp=new LoginPage();
 		FileLib flib = new FileLib();
@@ -35,6 +35,6 @@ public void main() throws Throwable {
 		sp.createLeadWithMandatoryDetails2(flib.readExcelData(EXCEL_PATH,"Leads",11, 1), flib.readExcelData(EXCEL_PATH,"Leads",12, 1));
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "PriceBookDetails"), "price book Details");
 		
-        bt.closedBrowser();
+    
 }
 }

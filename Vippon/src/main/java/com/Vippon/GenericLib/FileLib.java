@@ -1,6 +1,7 @@
 package com.Vippon.GenericLib;
 
 import java.io.FileInputStream;
+
 import java.io.FileOutputStream;
 import java.util.Properties;
 

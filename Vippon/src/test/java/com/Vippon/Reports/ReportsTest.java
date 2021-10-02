@@ -2,6 +2,7 @@ package com.Vippon.Reports;
 
 import java.util.concurrent.TimeUnit;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Vippon.GenericLib.BaseTest;
@@ -9,14 +10,13 @@ import com.Vippon.GenericLib.FileLib;
 import com.Vippon.GenericLib.WebdriverCommonLib;
 import com.Vippon.Pages.LoginPage;
 
-
+@Listeners(com.Vippon.GenericLib.ReportListeners.class)
 public class ReportsTest extends BaseTest {
 	
     @Test
 	public void main() throws Throwable 
 	{
-		BaseTest bt =new BaseTest();
-		bt.openBrowser();
+	
 		
 		FileLib flib= new FileLib();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -39,7 +39,7 @@ public class ReportsTest extends BaseTest {
 		r1.SelectCaseOwnerOption("Contacts");
 		r1.Continue();
 		
-		bt.closedBrowser();
+		
 		
 	}
 

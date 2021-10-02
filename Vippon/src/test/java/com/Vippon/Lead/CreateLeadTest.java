@@ -1,18 +1,18 @@
 package com.Vippon.Lead;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Vippon.GenericLib.BaseTest;
 import com.Vippon.GenericLib.FileLib;
 import com.Vippon.GenericLib.WebdriverCommonLib;
 import com.Vippon.Pages.LoginPage;
-
+@Listeners(com.Vippon.GenericLib.ReportListeners.class)
 public class CreateLeadTest extends BaseTest{
 	@Test
-	public  void main() throws Throwable {
+	public  void Lead() throws Throwable {
 		
-		BaseTest bt = new BaseTest();
-		bt.openBrowser();
+		
 		
 		
 		LoginPage lp=new LoginPage();
@@ -24,7 +24,7 @@ public class CreateLeadTest extends BaseTest{
 		wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "homeTitle"), "Home Page");
 		
 		HomePage hp = new HomePage();
-		hp.clickLeadsTab();
+//		hp.clickLeadsTab();
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "customViewTitle"),"Custom View Page");
 		
 		CustomViewPage cv = new CustomViewPage();
@@ -35,7 +35,7 @@ public class CreateLeadTest extends BaseTest{
 		cl.createLeadWithMandatoryDetails(flib.readExcelData(EXCEL_PATH,"Leads",1, 1),flib.readExcelData(EXCEL_PATH, "Leads", 2, 1));
 		wlib.verify(wlib.getPageTitle(),flib.readPropertyData(PROP_PATH, "leadDetailsTitle"), "Lead Details Page");
 		
-		bt.closedBrowser();
+		
 			
 	}
 	
