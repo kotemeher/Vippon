@@ -10,6 +10,7 @@ import com.Vippon.Pages.LoginPage;
 
 @Listeners(com.Vippon.GenericLib.ReportListeners.class)
 public class PotentialsTest extends BaseTest{
+	
 	@Test
 public  void main() throws Throwable {
 		

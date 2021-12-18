@@ -107,7 +107,7 @@ public class WebdriverCommonLib extends BaseTest{
 	{
 	    TakesScreenshot ts = (TakesScreenshot)BaseTest.driver;
 	    File src = ts.getScreenshotAs(OutputType.FILE);
-	    String dest="C:\\Users\\Meher Chakradhar\\git\\repository\\Vippon\\screenshots"+screenshotName+"png";
+	    String dest="C:\\Users\\Meher Chakradhar\\git\\repository\\Vippon\\screenshots"+screenshotName+".png";
 	    File destination = new File(dest);
 	    try {
 	    	Files.copy(src, destination);

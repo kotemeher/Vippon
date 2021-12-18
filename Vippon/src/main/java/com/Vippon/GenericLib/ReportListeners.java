@@ -32,16 +32,17 @@ public class ReportListeners implements ITestListener {
 		test.fail(MarkupHelper.createLabel(" case has FAILED because of following reasons: ", ExtentColor.RED));
 		test.fail(result.getThrowable());
 		WebdriverCommonLib wlib = new WebdriverCommonLib();
+		wlib.getFullPageScreenshot(result.getName());
 		test.addScreenCaptureFromPath(wlib.getFullPageScreenshot(result.getName()));
 	}
 	public void onTestSkipped(ITestResult result) {
 		test=extent.createTest(result.getName());
-		test.skip(MarkupHelper.createLabel(" case has SKIPPED because of following reasons: ", ExtentColor.PINK));
+		test.skip(MarkupHelper.createLabel(result.getName()+" case has SKIPPED because of following reasons: ", ExtentColor.PINK));
 		test.skip(result.getThrowable());
 	}
 
 	public void onStart(ITestContext context) {
-		ExtentSparkReporter spark = new ExtentSparkReporter("C:\\Users\\Meher Chakradhar\\git\\repository\\Vippon\\Reports\\CreateLeadTest.html");
+		ExtentSparkReporter spark = new ExtentSparkReporter("C:\\Users\\Meher Chakradhar\\git\\repository\\Vippon\\Reports\\PotentialsTest.html");
 		//Customizing report view
 		spark.config().setDocumentTitle("Vippon Reports");
 		spark.config().setReportName("Extent Reports 5");
